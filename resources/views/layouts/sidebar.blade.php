@@ -36,8 +36,30 @@
             <li class="header">ADMIN MENU</li>
             <!-- Optionally, you can add icons to the links -->
             <li class="active"><a href="{{ route('home') }}"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
-            <li><a href="{{ route('category.index') }}"><i class="fa fa-bars"></i> <span>Category</span></a></li>
-            <li><a href="{{ route('product.index') }}"><i class="fa fa-cube"></i> <span>Product</span></a></li>
+            <li class="treeview" style="height: auto;">
+                    <a href="#">
+                      <i class="fa fa-bars"></i> <span>Category</span>
+                      <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                      </span>
+                    </a>
+                    <ul class="treeview-menu" style="display: none;">
+                    <li><a href="{{route('category.index')}}"><i class="fa fa-circle-o"></i>Data</a></li>
+                    <li><a href="{{route('category.create')}}"><i class="fa fa-circle-o"></i>Add</a></li>
+                    </ul>
+                  </li>
+            <li class="treeview" style="height: auto;">
+                    <a href="#">
+                      <i class="fa fa-cube"></i> <span>Product</span>
+                      <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                      </span>
+                    </a>
+                    <ul class="treeview-menu" style="display: none;">
+                    <li><a href="{{route('product.index')}}"><i class="fa fa-circle-o"></i>Data</a></li>
+                    <li><a href="{{route('product.create')}}"><i class="fa fa-circle-o"></i>Add</a></li>
+                    </ul>
+                  </li>
             <li><a href="{{ route('confirmAdmin') }}"><i class="fa fa-dollar "></i> <span>Konfirmasi Pembayaran</span></a></li>
             <li class="active"><a href="{{ url('/order') }}"><i class="fa  fa-exchange"></i> <span>List Order</span></a></li>
         </ul>

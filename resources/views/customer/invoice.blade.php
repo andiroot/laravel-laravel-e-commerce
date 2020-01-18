@@ -42,7 +42,7 @@
                         <tr class="btn-info">
                             <td colspan="3">
                                 Silahkan anda transfer ke BRI :<br>
-                                Atas Nama<b><i>Sheptian Bagja Utama</i></b></br>
+                                Atas Nama<b><i>Yadi</i></b></br>
                                 No.Rekening<b><i>2378491237</i></b>
                             </td>
                         </tr>

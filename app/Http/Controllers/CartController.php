@@ -72,6 +72,7 @@ class CartController extends Controller
         $order->receiver = $receiver;
         $order->address = $address;
         $order->total_price = $total_bayar;
+        $order->status='belum bayar';
         $order->date = Carbon::now();
         $order->save();
 
