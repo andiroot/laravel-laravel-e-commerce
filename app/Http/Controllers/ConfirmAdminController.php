@@ -43,7 +43,7 @@ class ConfirmAdminController extends Controller
         $product->update();
 
         Session::flash('status','Berhasil di konfirmasi dengan status di terima');
-        return redirect()->route('confirmAdmin');
+        return redirect()->back();
     }
 
     public function tolak($order_id)
@@ -57,7 +57,7 @@ class ConfirmAdminController extends Controller
         $order->save();
 
         Session::flash('status','Berhasil di konfirmasi dengan status di tolak');
-        return redirect()->route('confirmAdmin');
+        return redirect()->back();
     }
 
 //    public function detail($order_id)

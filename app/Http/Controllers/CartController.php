@@ -51,6 +51,7 @@ class CartController extends Controller
 
     public function checkout()
     {
+        
         $this->middleware('role:customer');
         return view('customer.checkout');
     }
@@ -89,7 +90,7 @@ class CartController extends Controller
 //        $order_product->order()->receiver;
 
         $user = User::findOrFail($user_id);
-        Mail::to($user)->send(new CheckoutMail($user,$order));
+        //Mail::to($user)->send(new CheckoutMail($user,$order));
 
         return redirect('invoice')->with('status','Anda berhasil melakukan checkout');
     }
