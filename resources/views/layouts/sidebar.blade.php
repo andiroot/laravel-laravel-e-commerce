@@ -29,9 +29,8 @@
         </form>
         <!-- /.search form -->
         @endif
-
         <!-- Sidebar Menu -->
-        @if(Auth::user())
+        @if(Auth::check() && Auth::user()->role=='admin')
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">ADMIN MENU</li>
             <!-- Optionally, you can add icons to the links -->
@@ -65,7 +64,7 @@
         </ul>
         @endif
 
-        @if(Auth::user())
+        @if(Auth::check() && Auth::user()->role=='customer')
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">CUSTOMER MENU</li>
             <!-- Optionally, you can add icons to the links -->

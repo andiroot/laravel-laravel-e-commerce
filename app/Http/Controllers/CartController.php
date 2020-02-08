@@ -51,6 +51,7 @@ class CartController extends Controller
 
     public function checkout()
     {
+        
         $this->middleware('role:customer');
         return view('customer.checkout');
     }
