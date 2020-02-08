@@ -13,3 +13,5 @@ yarn-error.log
 storage
 .idea
 composer.lock
+/public/upload
+td

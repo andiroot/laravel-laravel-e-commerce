@@ -28,6 +28,7 @@ class OrderController extends Controller
     {
         $details = Order_Product::where('order_id',$id)->get();
         $identity = Order_Product::where('order_id',$id)->first();
+        
         return view('order.detail', compact('details', 'identity'));
     }
 
